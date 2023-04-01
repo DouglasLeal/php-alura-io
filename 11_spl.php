@@ -4,7 +4,7 @@ $arquivo = new SplFileObject('cursos.csv');
 
 while(!$arquivo->eof()){
     $linha = $arquivo->fgetcsv(',');
-    echo $linha[0] . PHP_EOL;
+    echo utf8_encode($linha[0]) . PHP_EOL;
 }
 
 $date = new DateTime();
